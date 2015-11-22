@@ -18,7 +18,6 @@
         # execute a SQL query on the database (ALL)
         $query = "SELECT name,head_of_state FROM countries";
         $results = mysql_query($query);
-        $rows = mysql_fetch_array($results);
         
         if ($FORMAT == 'xml')
         {

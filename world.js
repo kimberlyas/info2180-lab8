@@ -4,7 +4,36 @@ window.onload = function()
  {
     // Listen for clicks on the button with id of lookup
     document.getElementById("lookup").onclick = fetchData;
-               
+    
+    // Create checkboxes
+    var checkbox1 = document.createElement("input");
+    var checkbox2 = document.createElement("input");
+
+    // Assign different attributes to the elements
+    checkbox1.setAttribute("type", "checkbox");
+    checkbox1.setAttribute("id", "all");
+    checkbox1.setAttribute("name", "all");
+    checkbox1.setAttribute("value", "all");
+    checkbox2.setAttribute("type", "checkbox");
+    checkbox2.setAttribute("id", "xml");
+    checkbox2.setAttribute("name", "xml");
+    checkbox2.setAttribute("value", "xml");
+    
+    // Create Labels
+    var label1 = document.createElement("Label");
+    label1.innerHTML = "ALL";
+    var label2 = document.createElement("Label");
+    label2.innerHTML = "XML";
+
+    // 'controls' is the div id, where new elements are to be added
+    var controls = document.getElementById("controls");
+    
+    // Append the elements in page 
+    controls.appendChild(label1);
+    controls.appendChild(checkbox1);
+    controls.appendChild(label2);
+    controls.appendChild(checkbox2);
+    
  };
                
 function fetchData() // fetch data from world.php
